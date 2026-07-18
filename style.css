@@ -727,226 +727,211 @@ ul { list-style: none; }
   .hero-inner { gap: 32px; }
 }
 @media (max-width: 768px) {
-  /* Tabs Layout Alignment for Mobile View */
-  .navbar-inner {
-    height: auto;
-    padding: 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    position: static !important;
-    padding: 0 !important;
-    background: transparent !important;
-    overflow-x: auto;
-    width: 100%;
-  }
-  .nav-links > a {
-    padding: 12px 14px !important;
-    font-size: 0.75rem !important;
-    border-bottom: none !important;
-    border-right: 1px solid rgba(255,255,255,0.1) !important;
-  }
-  .nav-verify-btn { margin-top: 0 !important; }
-  .hamburger { display: none !important; }
-
-  /* Topbar & Header Details Visibility Fixes */
-  .topbar { display: flex !important; padding: 6px 12px; }
-  .topbar-inner { display: flex !important; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
-  .topbar-left { display: flex !important; flex-direction: column; gap: 4px; align-items: center; }
-  .topbar-right { display: flex !important; justify-content: center; gap: 10px; margin-top: 4px; }
-  .topbar-divider { display: none; }
-  .logobar-contact { display: flex !important; flex-direction: row; gap: 10px; margin-top: 8px; justify-content: center; width: 100%; }
-  .logobar-inner { flex-direction: column; align-items: center; text-align: center; }
-
   /* ────────────────────────────────────────────────────────
-     CRITICAL FIX: SCROLL-FREE NO-SCROLL MOBILE VIEW FOR RESULT
+     ULTIMATE NO-SCROLL SINGLE SCREEN LOCK FOR RESULT DETAILS
      ──────────────────────────────────────────────────────── */
+  
+  /* Baste Landing headers/footers completely hidden on result page context to avoid double scrolling */
+  .topbar, .logobar, .navbar, .ticker-wrap, .footer, .hero, .section, .welcome-strip { 
+    display: none !important; 
+  }
+
+  body, html {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden !important; /* Locks browser viewport completely */
+    background: var(--light-bg);
+  }
+
   .result-bg { 
-    padding: 10px; 
+    padding: 8px; 
     height: 100vh; 
     max-height: 100vh;
-    overflow: hidden; 
-    justify-content: center;
+    overflow: hidden !important; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
+
+  /* Top Control Action Buttons Row */
   .result-top-actions { 
-    margin-bottom: 8px; 
-    gap: 6px;
+    width: 100%;
+    margin-bottom: 6px; 
+    gap: 4px;
+    justify-content: space-between;
+    flex: 0 0 auto;
   }
   .btn-action {
-    padding: 6px 12px !important;
-    font-size: 0.75rem !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+    flex: 1;
+    justify-content: center;
   }
+
+  /* Main Document Framework Layout - Locked exact proportions */
   .result-doc { 
-    height: 90vh;
-    max-height: calc(100vh - 70px);
+    width: 100%;
+    height: calc(100vh - 56px); /* Exact height space after buttons */
+    max-height: calc(100vh - 56px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-lg);
   }
+
+  /* Header structure inside the document */
   .result-doc-header { 
     flex-direction: row !important; 
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px !important; 
-    gap: 10px !important;
+    padding: 8px 12px !important; 
+    gap: 8px !important;
     flex: 0 0 auto;
   }
   .result-doc-logo-row { 
     flex-direction: row !important; 
-    gap: 10px !important; 
+    gap: 8px !important; 
   }
   .result-doc-logo-svg { 
-    width: 40px !important; 
-    height: 40px !important; 
+    width: 34px !important; 
+    height: 34px !important; 
   }
   .result-doc-org h3 { 
-    font-size: 0.85rem !important; 
+    font-size: 0.80rem !important; 
+    line-height: 1.1;
   }
   .result-doc-org span { 
-    font-size: 0.65rem !important; 
+    font-size: 0.60rem !important; 
     margin-top: 1px !important;
   }
   .result-doc-badge { 
     text-align: right !important; 
     width: auto !important; 
-    padding: 4px 8px !important;
+    padding: 3px 6px !important;
   }
   .result-doc-badge h2 { 
-    font-size: 0.75rem !important; 
+    font-size: 0.70rem !important; 
   }
   .result-doc-badge span { 
-    font-size: 0.6rem !important; 
+    font-size: 0.55rem !important; 
   }
   
-  /* Body spacing adjustments inside card */
+  /* Body content row - Tight flexible compression */
   .result-doc-body { 
-    padding: 12px 14px !important; 
+    padding: 10px 12px !important; 
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: hidden !important;
   }
+
+  /* Name & Grade Bar Block */
   .result-name-bar { 
     flex-direction: row !important; 
     justify-content: space-between;
     text-align: left !important; 
-    padding: 10px 14px !important; 
-    margin-bottom: 10px !important; 
-    gap: 8px !important;
+    padding: 8px 12px !important; 
+    margin-bottom: 8px !important; 
+    gap: 6px !important;
   }
   .result-name-bar h3 { 
-    font-size: 0.95rem !important; 
+    font-size: 0.88rem !important; 
   }
   .result-name-bar span { 
-    font-size: 0.75rem !important; 
+    font-size: 0.70rem !important; 
   }
   .grade-circle { 
-    width: 36px !important; 
-    height: 36px !important; 
-    font-size: 1rem !important; 
+    width: 32px !important; 
+    height: 32px !important; 
+    font-size: 0.90rem !important; 
   }
+
+  /* Information Grid Data Fields */
   .result-grid { 
     grid-template-columns: 1fr 1fr !important; 
-    gap: 8px !important; 
-    margin-bottom: 10px !important;
+    gap: 6px !important; 
+    margin-bottom: 8px !important;
   }
   .result-field { 
-    padding: 6px 10px !important; 
+    padding: 4px 8px !important; 
   }
   .result-field-label { 
-    font-size: 0.6rem !important; 
-    margin-bottom: 2px !important;
+    font-size: 0.55rem !important; 
+    margin-bottom: 1px !important;
   }
   .result-field-value { 
-    font-size: 0.8rem !important; 
+    font-size: 0.75rem !important; 
   }
+
+  /* Subject Marks Statement Table */
   .result-table { 
-    margin-bottom: 10px !important; 
+    margin-bottom: 8px !important; 
   }
   .result-table th, .result-table td { 
-    padding: 8px 12px !important; 
-    font-size: 0.78rem !important; 
+    padding: 6px 10px !important; 
+    font-size: 0.75rem !important; 
   }
+
+  /* Performance Progress Indicator Bar */
   .result-bar-wrap { 
-    padding: 8px !important; 
-    margin-bottom: 10px !important; 
+    padding: 6px 10px !important; 
+    margin-bottom: 8px !important; 
   }
   .result-bar-head { 
-    font-size: 0.75rem !important; 
-    margin-bottom: 4px !important;
+    font-size: 0.70rem !important; 
+    margin-bottom: 2px !important;
   }
   .result-bar-track { 
-    height: 8px !important; 
+    height: 6px !important; 
   }
   
-  /* Footer row inside the document card */
+  /* Verification Footer Section */
   .result-qr-row { 
     flex-direction: row !important; 
     justify-content: space-between !important;
     align-items: center !important;
-    padding-top: 10px !important; 
-    gap: 10px !important;
+    padding-top: 8px !important; 
+    gap: 8px !important;
   }
   .result-qr-area { 
-    gap: 8px !important; 
+    gap: 6px !important; 
     text-align: left !important;
   }
   .result-qr-area img { 
-    width: 55px !important; 
-    height: 55px !important; 
-    padding: 3px !important; 
+    width: 48px !important; 
+    height: 48px !important; 
+    padding: 2px !important; 
   }
   .result-qr-text strong { 
-    font-size: 0.75rem !important; 
-    margin-bottom: 1px !important;
+    font-size: 0.70rem !important; 
+    margin-bottom: 0px !important;
   }
   .result-qr-text span { 
-    font-size: 0.65rem !important; 
+    font-size: 0.60rem !important; 
   }
   .result-stamp { 
-    padding: 4px 12px !important; 
-    font-size: 0.7rem !important; 
+    padding: 3px 8px !important; 
+    font-size: 0.65rem !important; 
     margin-top: 0 !important; 
     align-self: center !important;
   }
+
+  /* Bottom line meta signature panel */
   .result-doc-footer { 
-    padding: 8px 16px !important; 
+    padding: 6px 12px !important; 
     flex: 0 0 auto;
   }
   .result-doc-footer span { 
-    font-size: 0.65rem !important; 
+    font-size: 0.60rem !important; 
   }
-
-  /* Other landing page elements */
-  .cta-banner { flex-direction: column; padding: 32px 24px; text-align: center; align-items: center; }
-  .cta-banner p { max-width: 100%; }
-  .verify-card { padding: 28px 20px; }
-  .hero { min-height: auto; padding: 40px 0; }
-  .hero-inner { flex-direction: column; padding: 40px 20px; gap: 30px; }
-  .hero-content { max-width: 100%; }
-  .section { padding: 50px 20px; }
-  .footer-main { padding: 44px 20px 36px; }
-  .footer-brand p { max-width: 100%; }
+  .result-doc-watermark { 
+    font-size: 2.8rem !important; 
+  }
 }
 @media (max-width: 600px) {
-  .footer-main { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
-  .result-top-actions { justify-content: center; flex-wrap: wrap; }
-  .hero-title { font-size: 1.6rem; }
-  .hero-subtitle { font-size: 0.88rem; }
-  .stats-inner { grid-template-columns: 1fr; }
-  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 20px; }
-  .stat-item:last-child { border-bottom: none; }
-  .programs-grid { grid-template-columns: 1fr; }
-  .verify-page { padding: 30px 14px 40px; }
-  .verify-card { padding: 24px 16px; }
-  .verify-card-header h2 { font-size: 1.2rem; }
-  .result-doc-watermark { font-size: 3.5rem; }
+  .result-top-actions { justify-content: center; flex-wrap: nowrap; }
 }
 @media print {
   .navbar, .logobar, .topbar, .ticker-wrap, .result-top-actions, .footer { display: none !important; }
