@@ -1,0 +1,2 @@
+/* The uploaded root-level logo.png takes precedence over the temporary wordmark. */
+.brand-logo::after { display: none !important; }
