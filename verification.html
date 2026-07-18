@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"/>
+<title>Certificate Verification – BSTE Pakistan</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══ TOP INFO BAR ══════════════════════════════════════════ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:13px;height:13px;"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 15v-4H7l5-9v4h4l-5 9z"/></svg>
+        ISO 9001:2015 CERTIFIED
+      </div>
+      <div class="topbar-divider"></div>
+      <div class="topbar-item">Office Timing: Monday–Friday 08:00 AM – 04:00 PM</div>
+    </div>
+    <div class="topbar-right">
+      <span>📧 info.bste.com.pk</span>
+      <div class="topbar-divider"></div>
+      <span>🌐 www.bste.com.pk</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LOGO BAR ═══════════════════════════════════════════════ -->
+<div class="logobar">
+  <div class="logobar-inner">
+    <a href="index.html" class="logo-area">
+      <div class="logo-svg-wrap">
+        <img class="logo-img gh-logo" src="logo.png" alt="BSTE Logo" onerror="this.onerror=null;this.src='https://placehold.co/72x72/ffffff/075c3c?text=BSTE'"/>
+      </div>
+      <div class="logo-text-area">
+        <h1>BSTE</h1>
+        <span>Board of Science &amp; Technology Education</span>
+        <span style="font-size:0.65rem;color:#0e8f78;font-weight:600;letter-spacing:0.5px;">Pakistan</span>
+      </div>
+    </a>
+    <div class="logobar-right">
+      <div class="logobar-contact">
+        <div class="logobar-contact-item">📧 <strong>info@bste.com.pk</strong></div>
+        <div class="logobar-contact-item">📍 <strong>Pakistan</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ NAVBAR ═════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#academic-scope">Academic Scope</a>
+      <a href="verification.html" class="active">Verification</a>
+      <a href="index.html#about-us">About Us</a>
+      <a href="verification.html" class="nav-verify-btn">🔍 Verify Certificate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ TICKER ════════════════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker-label">📢 Notifications</div>
+  <div class="ticker-track">
+    <div class="ticker-content">
+      <span>Certificate verification portal is live — Verify any BSTE credential online instantly</span>
+      <span>Annual Technical Examination Results 2025 announced — Check your result online now</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ VERIFY CONTENT ════════════════════════════════════════ -->
+<div class="verify-page">
+  <div class="verify-wrap">
+    <div class="verify-page-title">
+      🛡️ &nbsp;Certificate Verification System — BSTE Pakistan
+    </div>
+    <div class="verify-card">
+      <div class="verify-card-header">
+        <div class="verify-shield-icon">🔍</div>
+        <h2>Verify Certificate</h2>
+        <p>Enter the student's Roll Number and Passing Year below to verify authenticity.</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="rollInput">Roll Number</label>
+        <input type="text" class="form-control" id="rollInput" placeholder="e.g. 100448" autocomplete="off" inputmode="numeric"/>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="yearInput">Passing Year</label>
+        <input type="text" class="form-control" id="yearInput" placeholder="e.g. 2025" autocomplete="off" inputmode="numeric" maxlength="4"/>
+      </div>
+
+      <button class="btn-submit" onclick="verifyStudent()">
+        🔍 &nbsp;Verify Now
+      </button>
+
+      <div class="verify-error" id="verifyError"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <p>© 2026 Board of Science &amp; Technology Education (BSTE) — Pakistan. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+const GITHUB_USER   = "Mohsinshafkat";
+const GITHUB_REPO   = "BSTE2.1";
+const GITHUB_BRANCH = "main";
+function ghRaw(path){ return `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}`; }
+document.querySelectorAll('.gh-logo').forEach(img => { img.src = ghRaw('logo.png'); });
+
+const students = [
+  { roll:"100448", year:"2025", name:"BILAL AZIZ",    father:"ABDUL MAJEED",   reg:"BSTE/TEC/100448", course:"DAE (TELECOMMUNICATION TECHNOLOGY)", total:"3200", obt:"1506", per:"47.06%", grade:"D" },
+  { roll:"100449", year:"2025", name:"IRFAN ASLAM",   father:"SHOUKAT ALI",    reg:"BSTE/TEC/100449", course:"WEB DESIGN & DEVELOPMENT",           total:"1000", obt:"410",  per:"41.00%", grade:"D" },
+  { roll:"100450", year:"2025", name:"AHMED RAZA",    father:"GHULAM RAZA",    reg:"BSTE/TEC/100450", course:"CIVIL & ARCHITECTURE TECHNOLOGY",    total:"2400", obt:"1320", per:"55.00%", grade:"C" },
+  { roll:"100451", year:"2025", name:"SANA FATIMA",   father:"MUHAMMAD TARIQ", reg:"BSTE/TEC/100451", course:"INFORMATION TECHNOLOGY (DIT)",       total:"1200", obt:"780",  per:"65.00%", grade:"B" },
+  { roll:"100452", year:"2025", name:"USMAN KHALID",  father:"KHALID MEHMOOD", reg:"BSTE/TEC/100452", course:"ELECTRICAL TECHNOLOGY",              total:"2800", obt:"1960", per:"70.00%", grade:"A" }
+];
+
+function verifyStudent(){
+  const roll  = document.getElementById('rollInput').value.trim();
+  const year  = document.getElementById('yearInput').value.trim();
+  const errEl = document.getElementById('verifyError');
+  errEl.style.display = 'none';
+  if(!roll || !year){
+    errEl.textContent = '⚠️ Please enter both Roll Number and Passing Year.';
+    errEl.style.display = 'block'; return;
+  }
+  const m = students.find(s => s.roll === roll && s.year === year);
+  if(!m){
+    errEl.textContent = '⚠️ No record found.';
+    errEl.style.display = 'block'; return;
+  }
+  const p = new URLSearchParams(m);
+  window.location.href = 'result.html?' + p.toString();
+}
+</script>
+</body>
+</html>
