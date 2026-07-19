@@ -402,10 +402,11 @@ a {
   margin-top: 48px;
 }
 
+/* COMPACT ADJUSTMENT DONE HERE */
 .architecture-card {
-  padding: 28px;
+  padding: 20px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 14px;
   background: var(--white);
   transition: .2s;
 }
@@ -422,10 +423,11 @@ a {
   letter-spacing: .1em;
 }
 
+/* COMPACT ADJUSTMENT DONE HERE */
 .architecture-card h3 {
-  margin: 42px 0 12px;
+  margin: 20px 0 8px;
   color: var(--forest);
-  font: 700 1.25rem "Plus Jakarta Sans", sans-serif;
+  font: 700 1.15rem "Plus Jakarta Sans", sans-serif;
 }
 
 .architecture-card p {
@@ -453,22 +455,25 @@ a {
   margin-top: 32px;
 }
 
+/* COMPACT ADJUSTMENT DONE HERE (REMOVED FIXED MIN-HEIGHT) */
 .program-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 260px;
+  min-height: auto;
   overflow: hidden;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   color: #333;
   isolation: isolate;
+  padding-bottom: 12px;
 }
 
+/* COMPACT ADJUSTMENT DONE HERE */
 .program-card img {
   width: 100%;
-  height: 130px;
+  height: 150px;
   object-fit: cover;
   transition: transform .45s;
 }
@@ -481,8 +486,9 @@ a {
   content: none;
 }
 
+/* COMPACT ADJUSTMENT DONE HERE */
 .program-card div {
-  padding: 12px;
+  padding: 16px 14px 4px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -1083,8 +1089,9 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* REMOVED FIXED MIN-HEIGHT TO PREVENT WHITE GAPS ON TABLETS */
   .program-card {
-    min-height: 375px;
+    min-height: auto;
   }
 
   .about-image {
@@ -1224,14 +1231,14 @@ a {
     grid-template-columns: 1fr;
   }
 
+  /* REMOVED FIXED MIN-HEIGHT TO PREVENT GAPS ON PHONES */
   .program-card {
-    min-height: 330px;
+    min-height: auto;
   }
 
+  /* FIXED MOBILE PADDING GAP TO ALLOW FLEX NORMAL FLOW */
   .program-card div {
-    right: 14px;
-    bottom: 14px;
-    left: 14px;
+    padding: 14px;
   }
 
   .stats-grid {
