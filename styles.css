@@ -376,6 +376,7 @@ a {
 .section h2,
 .contact-section h2 {
   margin: 0;
+  margin-top: 0;
   color: var(--forest);
   font: 800 clamp(2rem, 3.3vw, 3.2rem)/1.12 "Plus Jakarta Sans", sans-serif;
   letter-spacing: -.05em;
@@ -384,7 +385,7 @@ a {
 .split-heading {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
-  align-items: end;
+  align-items: start; /* 'end' se badal kar 'start' kiya taake alignment seedhi ho */
   gap: 80px;
 }
 
@@ -404,9 +405,9 @@ a {
 
 /* COMPACT ADJUSTMENT DONE HERE */
 .architecture-card {
-  padding: 20px;
+  padding: 16px 20px; /* Pehle padding 20px thi, ise kam kar ke box compact kiya */
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 12px; /* Corners thore neat aur chote kiye */
   background: var(--white);
   transition: .2s;
 }
@@ -425,9 +426,9 @@ a {
 
 /* COMPACT ADJUSTMENT DONE HERE */
 .architecture-card h3 {
-  margin: 20px 0 8px;
+  margin: 16px 0 6px; /* Number aur heading ke darmiyan gap 20px se kam kar ke 16px kiya */
   color: var(--forest);
-  font: 700 1.15rem "Plus Jakarta Sans", sans-serif;
+  font: 700 1.08rem "Plus Jakarta Sans", sans-serif; /* Font size 1.15rem se chota kiya */
 }
 
 .architecture-card p {
@@ -1087,6 +1088,10 @@ a {
 
   .program-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .architecture-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   /* REMOVED FIXED MIN-HEIGHT TO PREVENT WHITE GAPS ON TABLETS */
