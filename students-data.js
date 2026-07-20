@@ -175,7 +175,7 @@ window.STUDENT_RECORDS = [
 { roll: "90622", year: "2025", name: "KASHIF NAWAZ", father: "MUHAMMAD IQBAL", reg: "BSTE/TEC/90622", course: "MOBILE PHONE REPAIRING", total: "500", obt: "276", per: "55.20%", grade: "C" },
 { roll: "90623", year: "2025", name: "SHAFQAT AKHTAR", father: "SHOUKAT ALI", reg: "BSTE/TEC/90623", course: "AUTOCAD MECHANICAL", total: "500", obt: "410", per: "82.00%", grade: "A+" },
 { roll: "90624", year: "2025", name: "WAQAS QURESHI", father: "ABDUL MAJEED", reg: "BSTE/TEC/90624", course: "DAE (TELECOMMUNICATION TECHNOLOGY)", total: "3200", obt: "2284", per: "71.38%", grade: "A" },
-{ roll: "90625", year: "2023", name: "MUREED HUSSAIN", father: "KHADIM HUSSAIN", reg: "BSTE/MECH/2023/90625", course: "DAE (MECHANICAL TECHNOLOGY)", total: "3450", obt: "2529", per: "73.25%", grade: "A" },
+{ roll: "90625", year: "2023", name: "MUREED HUSSAIN", father: "KHADIM HUSSAIN", reg: "BSTE/TEC/90625", course: "DAE (MECHANICAL TECHNOLOGY)", total: "3450", obt: "2529", per: "73.25%", grade: "A" },
 { roll: "90626", year: "2025", name: "AHMED MEHMOOD", father: "MUHAMMAD ASLAM", reg: "BSTE/TEC/90626", course: "DAE (MECHANICAL)", total: "3450", obt: "2943", per: "85.30%", grade: "A+" },
 { roll: "90627", year: "2025", name: "SHAFQAT BUTT", father: "MUHAMMAD ASLAM", reg: "BSTE/TEC/90627", course: "DAE (MECHANICAL)", total: "3450", obt: "2424", per: "70.26%", grade: "A" },
 { roll: "90628", year: "2025", name: "WAQAS BUTT", father: "GHULAM RASOOL", reg: "BSTE/TEC/90628", course: "AUTOCAD MECHANICAL", total: "500", obt: "469", per: "93.80%", grade: "A+" },
