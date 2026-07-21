@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verification Document Generator</title>
-<script src="[https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js](https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js)"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
 @font-face {
 font-family: 'Canterbury';
@@ -28,6 +28,8 @@ background: #ffffff;
 padding: 25px;
 border-radius: 8px;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+position: relative;
+z-index: 10;
 }
 .form-container h2 {
 margin-top: 0;
@@ -68,6 +70,8 @@ border-radius: 4px;
 font-size: 16px;
 font-weight: bold;
 cursor: pointer;
+position: relative;
+z-index: 20;
 }
 button.btn-submit:hover {
 background-color: #2b642e;
@@ -77,6 +81,7 @@ position: absolute;
 left: -9999px;
 top: 0;
 width: 794px;
+z-index: -1;
 }
 #pdf-template {
 width: 794px;
@@ -276,7 +281,7 @@ width: 100%;
 <input type="text" id="percentage" value="73.25%" required>
 </div>
 </div>
-<button type="submit" class="btn-submit">Submit & Download PDF</button>
+<button type="submit" id="downloadBtn" class="btn-submit">Submit & Download PDF</button>
 </form>
 </div>
 <div id="pdf-wrapper">
@@ -366,6 +371,7 @@ const grade = document.getElementById('grade').value;
 const totalMarks = document.getElementById('totalMarks').value;
 const obtainedMarks = document.getElementById('obtainedMarks').value;
 const percentage = document.getElementById('percentage').value;
+
 document.getElementById('outStudentName').innerText = studentName;
 document.getElementById('outFatherName').innerText = fatherName;
 document.getElementById('outRegNo').innerText = regNo;
@@ -379,10 +385,11 @@ document.getElementById('outTableGrade').innerText = grade;
 document.getElementById('outTableTotalMarks').innerText = totalMarks;
 document.getElementById('outTableObtainedMarks').innerText = obtainedMarks;
 document.getElementById('outTablePercentage').innerText = percentage;
+
 const element = document.getElementById('pdf-template');
 const opt = {
 margin: 0,
-filename: rollNo ? ${rollNo}.pdf : 'Verification_Document.pdf',
+filename: rollNo ? `${rollNo}.pdf` : 'Verification_Document.pdf',
 image: { type: 'jpeg', quality: 1.0 },
 html2canvas: { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
