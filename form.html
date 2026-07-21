@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Document Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=TeX+Gyre+Termes:wght@400;700&display=swap');
+
+        @font-face {
+            font-family: 'TeX Gyre Termes';
+            src: local('TeX Gyre Termes'), local('TeXGyreTermes-Regular');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TeX Gyre Termes';
+            src: local('TeX Gyre Termes Bold'), local('TeXGyreTermes-Bold');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Canterbury';
+            src: url('Canterbury.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+            color: #367D39;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        button.btn-submit {
+            width: 100%;
+            background-color: #367D39;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button.btn-submit:hover {
+            background-color: #2b642e;
+        }
+
+        /* PDF Wrapper Fix - Absolute positioning and exact pixel height scale */
+        #pdf-wrapper {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            width: 794px; /* Exact A4 width at 96 DPI */
+        }
+
+        #pdf-template {
+            width: 794px;
+            max-height: 1120px; /* Slightly under standard 1123px to ensure single page */
+            padding: 30px;
+            background: #ffffff;
+            box-sizing: border-box;
+            font-family: 'TeX Gyre Termes', 'Times New Roman', Times, serif;
+            color: #111111;
+            overflow: hidden;
+        }
+
+        .page-container {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            padding: 20px 25px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .yt-logo {
+            width: 110px;
+            height: 70px;
+            margin: 0 auto 5px auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .domain-title {
+            font-family: 'Canterbury', serif;
+            font-size: 26pt;
+            font-weight: bold;
+            color: #367D39;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .sub-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #222222;
+            margin-top: 5px;
+        }
+
+        .contact-bar {
+            text-align: center;
+            margin: 10px 0;
+            padding: 6px 0;
+            border-top: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .red-box-header {
+            background-color: #367D39;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 11.5pt;
+            text-transform: uppercase;
+            padding: 6px 10px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .content-section {
+            font-family: 'TeX Gyre Termes', 'Times New Roman', Times, serif;
+            font-size: 12.5pt;
+            font-weight: normal;
+            line-height: 1.6;
+            text-align: justify;
+            color: #111111;
+            margin-bottom: 8px;
+        }
+
+        .bold-field {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .marks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 8px;
+            font-family: 'TeX Gyre Termes', 'Times New Roman', Times, serif;
+        }
+
+        .marks-table td {
+            border: 1px solid #cccccc;
+            padding: 4px 10px;
+            font-size: 10.5pt;
+            font-weight: 600;
+        }
+
+        .marks-table td.label-col {
+            width: 50%;
+            font-weight: bold;
+            color: #111111;
+            background-color: #f9f9f9;
+        }
+
+        .marks-table td.val-col {
+            width: 50%;
+            text-align: center;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .footer-section {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .footer-table td {
+            vertical-align: middle;
+        }
+
+        .verified-badge {
+            color: #367D39;
+            font-weight: bold;
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .disclaimer-text {
+            font-size: 9pt;
+            color: #666666;
+            margin-top: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .qr-wrapper {
+            text-align: right;
+        }
+
+        .qr-wrapper img {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #cccccc;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Verification Details Form</h2>
+    <form id="verificationForm">
+        <div class="form-group">
+            <label>Student Name:</label>
+            <input type="text" id="studentName" value="MUREED HUSSAIN" required>
+        </div>
+        <div class="form-group">
+            <label>Father / Husband Name:</label>
+            <input type="text" id="fatherName" value="KHADIM HUSSAIN" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Registration No:</label>
+                <input type="text" id="regNo" value="BSTE/TEC/90625" required>
+            </div>
+            <div class="form-group">
+                <label>Roll No:</label>
+                <input type="text" id="rollNo" value="90625" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Evaluated / Institute Name:</label>
+            <input type="text" id="institute" value="BSTE PAKISTAN" required>
+        </div>
+        <div class="form-group">
+            <label>Programme / Course / Trade:</label>
+            <input type="text" id="course" value="DAE (MECHANICAL TECHNOLOGY)" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Session:</label>
+                <input type="text" id="session" value="2020–2023" required>
+            </div>
+            <div class="form-group">
+                <label>Grade:</label>
+                <input type="text" id="grade" value="A" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Total Marks:</label>
+                <input type="number" id="totalMarks" value="3450" required>
+            </div>
+            <div class="form-group">
+                <label>Obtained Marks:</label>
+                <input type="number" id="obtainedMarks" value="2529" required>
+            </div>
+            <div class="form-group">
+                <label>Percentage:</label>
+                <input type="text" id="percentage" value="73.25%" required>
+            </div>
+        </div>
+        <button type="submit" class="btn-submit">Submit & Download PDF</button>
+    </form>
+</div>
+
+<!-- Render Wrapper -->
+<div id="pdf-wrapper">
+    <div id="pdf-template">
+        <div class="page-container">
+            <div class="top-content">
+                <!-- Header Section -->
+                <div class="header-section">
+                    <img src="logo.png" alt="Logo" class="yt-logo">
+                    <div class="domain-title">Board of Science & Technology Education</div>
+                    <div class="sub-title">Established Under (ABB, XXV of 1982 Govt Of Pakistan)</div>
+                </div>
+
+                <!-- Contact Bar -->
+                <div class="contact-bar">
+                    <div style="display: flex; justify-content: center; gap: 80px; font-size: 11pt; color: #333333;">
+                        <span>Email: info@bste.com.pk</span>
+                        <span>Website: www.bste.com.pk</span>
+                    </div>
+                </div>
+
+                <div class="red-box-header">APPROVED RESULT DETAILS</div>
+
+                <!-- Verification Text -->
+                <div class="content-section">
+                    It is to verify that the Diploma/Certificate issued in favor of Mr/Miss/Mrs. <span class="bold-field" id="outStudentName"></span> S/D/W/O <span class="bold-field" id="outFatherName"></span>, vide Registration No: <span class="bold-field" id="outRegNo"></span> with Roll No: <span class="bold-field" id="outRollNo"></span> trained and evaluated by <span class="bold-field" id="outInstitute"></span> in the trade of <span class="bold-field" id="outCourse"></span> is found genuine according to our office record with the following transcript.
+                </div>
+
+                <!-- Section Box 2 -->
+                <div class="red-box-header">MARKS CARD DETAILS</div>
+
+                <!-- Marks Table -->
+                <table class="marks-table">
+                    <tr>
+                        <td class="label-col">Roll No.</td>
+                        <td class="val-col" id="outTableRollNo"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Programme / Course</td>
+                        <td class="val-col" id="outTableCourse"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Session</td>
+                        <td class="val-col" id="outTableSession"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Grade</td>
+                        <td class="val-col" id="outTableGrade"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Total Marks</td>
+                        <td class="val-col" id="outTableTotalMarks"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Obtained Marks</td>
+                        <td class="val-col" id="outTableObtainedMarks"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Percentage</td>
+                        <td class="val-col" id="outTablePercentage"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-section">
+                <table class="footer-table">
+                    <tr>
+                        <td style="width: 65%; text-align: left;">
+                            <div class="verified-badge">
+                                &#10004; VERIFIED
+                            </div>
+                            <div class="disclaimer-text">
+                                This is a web-based generated document and does not require any signature.
+                            </div>
+                        </td>
+                        <td style="width: 35%; text-align: right;">
+                            <div class="qr-wrapper">
+                                <img src="qrcode.png" alt="QR Code">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('verificationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get Values
+        const studentName = document.getElementById('studentName').value;
+        const fatherName = document.getElementById('fatherName').value;
+        const regNo = document.getElementById('regNo').value;
+        const rollNo = document.getElementById('rollNo').value;
+        const institute = document.getElementById('institute').value;
+        const course = document.getElementById('course').value;
+        const session = document.getElementById('session').value;
+        const grade = document.getElementById('grade').value;
+        const totalMarks = document.getElementById('totalMarks').value;
+        const obtainedMarks = document.getElementById('obtainedMarks').value;
+        const percentage = document.getElementById('percentage').value;
+
+        // Set Values in PDF Template
+        document.getElementById('outStudentName').innerText = studentName;
+        document.getElementById('outFatherName').innerText = fatherName;
+        document.getElementById('outRegNo').innerText = regNo;
+        document.getElementById('outRollNo').innerText = rollNo;
+        document.getElementById('outInstitute').innerText = institute;
+        document.getElementById('outCourse').innerText = course;
+
+        document.getElementById('outTableRollNo').innerText = rollNo;
+        document.getElementById('outTableCourse').innerText = course;
+        document.getElementById('outTableSession').innerText = session;
+        document.getElementById('outTableGrade').innerText = grade;
+        document.getElementById('outTableTotalMarks').innerText = totalMarks;
+        document.getElementById('outTableObtainedMarks').innerText = obtainedMarks;
+        document.getElementById('outTablePercentage').innerText = percentage;
+
+        const element = document.getElementById('pdf-template');
+
+        const opt = {
+            margin:       0,
+            filename:     'Verification_Document.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
+            jsPDF:        { unit: 'px', format: [794, 1120], orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save();
+    });
+</script>
+
+</body>
+</html>
