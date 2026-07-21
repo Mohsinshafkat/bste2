@@ -1,218 +1,53 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Verification Result | BSTE</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- html2pdf Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-  <style>
-    @font-face {
-      font-family: 'Canterbury';
-      src: url('Canterbury.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-  </style>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Pakistan's technical education standards platform</span>
-      <div><a href="mailto:info@bste.com.pk">info@bste.com.pk</a><span>•</span><span>Pakistan</span></div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Verification Result | BSTE</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a><div class="topbar"><div class="container topbar-inner"><span>Pakistan's technical education standards platform</span><div><a href="mailto:info@bste.com.pk">info@bste.com.pk</a><span>•</span><span>Pakistan</span></div></div></div><header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <!-- Image tag with proper brand-logo class -->
+      <img src="logo.png" alt="BSTE Logo" class="brand-logo">
+      <span class="brand-copy">
+        <strong>BSTE</strong>
+        <small>Board of Science &amp; Technology Education</small>
+      </span>
+    </a>
+    <div class="header-meta">
+      <span>National Standards Authority</span>
+      <strong>Technical &amp; Vocational Education</strong>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="main-nav">
+    <div class="container nav-inner">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#academic-scope">Academic Scope</a>
+      <a class="active" href="v.html">Verification</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#programs">Programs</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+<main id="main-content" class="result-page"><section class="result-hero"><div class="container"><p class="eyebrow">Official record check</p><h1>Verification <em>result.</em></h1></div></section><section class="result-section"><div class="container" id="result-container" aria-live="polite"></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-top">
+    <a class="brand" href="index.html">
+      <!-- Image tag with proper brand-logo class -->
+      <img src="logo.png" alt="BSTE Logo" class="brand-logo">
+      <span class="brand-copy">
+        <strong>BSTE</strong>
+        <small>Board of Science &amp; Technology Education</small>
+      </span>
+    </a>
+    <p>Standards that turn technical learning into opportunity.</p>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="current-year"></span> BSTE. All rights reserved.</span>
+    <div>
+      <a href="index.html#academic-scope">Academic scope</a>
+      <a href="v.html">Verification</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </div>
-  
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="BSTE Logo" class="brand-logo">
-        <span class="brand-copy">
-          <strong>BSTE</strong>
-          <small>Board of Science &amp; Technology Education</small>
-        </span>
-      </a>
-      <div class="header-meta">
-        <span>National Standards Authority</span>
-        <strong>Technical &amp; Vocational Education</strong>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="main-nav">
-      <div class="container nav-inner">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#academic-scope">Academic Scope</a>
-        <a class="active" href="v.html">Verification</a>
-        <a href="index.html#about">About Us</a>
-        <a href="index.html#programs">Programs</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main-content" class="result-page">
-    <section class="result-hero">
-      <div class="container">
-        <p class="eyebrow">Official record check</p>
-        <h1>Verification <em>result.</em></h1>
-      </div>
-    </section>
-    <section class="result-section">
-      <div class="container" id="result-container" aria-live="polite"></div>
-    </section>
-  </main>
-
-  <!-- HIDDEN PDF TEMPLATE FROM FORM.HTML -->
-  <div id="pdf-wrapper" style="position: absolute; left: -9999px; top: 0; width: 794px; z-index: -1;">
-    <div id="pdf-template" style="width: 794px; padding: 0px; background: #ffffff; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; color: #111111;">
-      <div class="page-container" style="width: 100%; padding: 60px 60px; background-color: #ffffff; box-sizing: border-box; margin: 0 auto;">
-        <div class="top-content">
-          <div class="header-section" style="text-align: center; margin-bottom: 5px;">
-            <img src="logo.png" alt="Logo" class="yt-logo" style="max-width: 260px; max-height: 165px; width: auto; height: auto; margin: 0 auto 10px auto; display: block; object-fit: contain;">
-            <div class="domain-title" style="font-family: 'Canterbury', serif; font-size: 24pt; font-weight: normal; color: #367D39; margin: 0; line-height: 1.1;">Board of Science &amp; Technology Education</div>
-            <div class="sub-title" style="font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #222222; margin-top: 5px;">Established Under (ABB, XXV of 1982 Govt Of Pakistan)</div>
-          </div>
-          
-          <div class="contact-bar" style="text-align: center; margin: 10px 0; padding: 6px 0; font-family: Arial, Helvetica, sans-serif;">
-            <div style="display: flex; justify-content: center; gap: 60px; font-size: 10pt; color: #333333;">
-              <span>Email: info@bste.com.pk</span>
-              <span>Website: www.bste.com.pk</span>
-            </div>
-          </div>
-
-          <div class="red-box-header" style="background-color: #367D39; color: #ffffff; font-weight: bold; font-size: 11pt; text-transform: uppercase; padding: 6px 10px; text-align: center; letter-spacing: 0.5px; margin-top: 10px; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif;">APPROVED RESULT DETAILS</div>
-
-          <div class="content-section" style="font-family: 'Times New Roman', Times, serif; font-size: 13pt; font-weight: normal; line-height: 1.8; text-align: justify; color: #111111; margin-bottom: 15px; padding: 0 5px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">
-            It is to verify that the Diploma/Certificate issued in favor of Mr/Miss/Mrs. <span class="bold-field" id="outStudentName" style="font-weight: bold; color: #000000;"></span> S/D/W/O <span class="bold-field" id="outFatherName" style="font-weight: bold; color: #000000;"></span>, vide Registration No: <span class="bold-field" id="outRegNo" style="font-weight: bold; color: #000000;"></span> with Roll No: <span class="bold-field" id="outRollNo" style="font-weight: bold; color: #000000;"></span> trained and evaluated by <span class="bold-field" id="outInstitute" style="font-weight: bold; color: #000000;"></span> in the trade of <span class="bold-field" id="outCourse" style="font-weight: bold; color: #000000;"></span> is found genuine according to our office record with the following transcript.
-          </div>
-
-          <div class="red-box-header" style="background-color: #367D39; color: #ffffff; font-weight: bold; font-size: 11pt; text-transform: uppercase; padding: 6px 10px; text-align: center; letter-spacing: 0.5px; margin-top: 10px; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif;">MARKS CARD DETAILS</div>
-
-          <table class="marks-table" style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-family: 'Times New Roman', Times, serif; table-layout: fixed;">
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Roll No.</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTableRollNo"></td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Programme / Course</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTableCourse"></td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Session</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTableSession"></td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Grade</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTableGrade"></td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Total Marks</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTableTotalMarks"></td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Obtained Marks</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTableObtainedMarks"></td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #111111; background-color: #f9f9f9; width: 50%;">Percentage</td>
-              <td style="border: 1px solid #cccccc; padding: 6px 10px; font-size: 10.5pt; font-weight: bold; color: #000000; width: 50%; text-align: center;" id="outTablePercentage"></td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="footer-section" style="margin-top: 25px; width: 100%;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="width: 50%; text-align: left; vertical-align: middle;">
-                <img src="stamp.png" alt="Stamp" style="width: 150px; height: auto; display: block;">
-              </td>
-              <td style="width: 50%; text-align: right; vertical-align: middle;">
-                <img src="qrcode.png" alt="QR Code" style="width: 75px; height: 75px; border: 1px solid #cccccc; padding: 2px; display: inline-block;">
-              </td>
-            </tr>
-          </table>
-          <div style="font-size: 8.5pt; color: #666666; margin-top: 15px; font-family: Arial, Helvetica, sans-serif; text-align: center; width: 100%;">
-            This is a web-based generated document and does not require any signature.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="BSTE Logo" class="brand-logo">
-        <span class="brand-copy">
-          <strong>BSTE</strong>
-          <small>Board of Science &amp; Technology Education</small>
-        </span>
-      </a>
-      <p>Standards that turn technical learning into opportunity.</p>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="current-year"></span> BSTE. All rights reserved.</span>
-      <div>
-        <a href="index.html#academic-scope">Academic scope</a>
-        <a href="v.html">Verification</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="students-data.js"></script>
-  <script src="site.js"></script>
-  <script src="result.js"></script>
-
-  <!-- DYNAMIC PDF GENERATION SCRIPT -->
-  <script>
-    function downloadCustomPDF(roll) {
-      // Find matched student from students-data.js array
-      var student = window.studentsData ? window.studentsData.find(s => String(s.roll) === String(roll)) : null;
-      
-      if (!student) {
-        alert("Student record not found!");
-        return;
-      }
-
-      // Fill hidden HTML template with student details
-      document.getElementById('outStudentName').innerText = student.name || '';
-      document.getElementById('outFatherName').innerText = student.fatherName || student.father_name || '';
-      document.getElementById('outRegNo').innerText = student.regNo || ('BSTE/TEC/' + student.roll);
-      document.getElementById('outRollNo').innerText = student.roll || '';
-      document.getElementById('outInstitute').innerText = student.institute || 'BSTE PAKISTAN';
-      document.getElementById('outCourse').innerText = student.course || student.program || '';
-      
-      document.getElementById('outTableRollNo').innerText = student.roll || '';
-      document.getElementById('outTableCourse').innerText = student.course || student.program || '';
-      document.getElementById('outTableSession').innerText = student.session || '';
-      document.getElementById('outTableGrade').innerText = student.grade || '';
-      document.getElementById('outTableTotalMarks').innerText = student.totalMarks || student.total || '';
-      document.getElementById('outTableObtainedMarks').innerText = student.obtainedMarks || student.obtained || '';
-      document.getElementById('outTablePercentage').innerText = student.percentage || '';
-
-      // Generate PDF
-      const element = document.getElementById('pdf-template');
-      const opt = {
-        margin: 0,
-        filename: `${student.roll}.pdf`,
-        image: { type: 'jpeg', quality: 1.0 },
-        html2canvas: { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: 'avoid-all' }
-      };
-
-      html2pdf().set(opt).from(element).save();
-    }
-  </script>
-</body>
-</html>
+</footer><script src="students-data.js"></script><script src="site.js"></script><script src="result.js"></script></body></html>
