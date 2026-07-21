@@ -92,24 +92,22 @@
         }
 
         #pdf-template {
-    width: 794px;
-    padding: 0px;
-    background: #ffffff;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    color: #111111;
+            width: 794px;
+            padding: 0px;
+            background: #ffffff;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            color: #111111;
         }
-        
 
         .page-container {
-    width: 100%;
-    border: 0px solid #e0e0e0;
-    padding: 60px 60px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    margin: 0 auto;
+            width: 100%;
+            border: 0px solid #e0e0e0;
+            padding: 60px 60px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            margin: 0 auto;
         }
-        
 
         .header-section {
             text-align: center;
@@ -117,15 +115,14 @@
         }
 
         .yt-logo {
-    max-width: 220px;
-    max-height: 150px;
-    width: auto;
-    height: auto;
-    margin: 0 auto 10px auto;
-    display: block;
-    object-fit: contain;
-}
-
+            max-width: 220px;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+            margin: 0 auto 10px auto;
+            display: block;
+            object-fit: contain;
+        }
 
         .domain-title {
             font-family: 'Canterbury', serif;
@@ -169,12 +166,12 @@
 
         .content-section {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 11.5pt;
+            font-size: 13pt;
             font-weight: normal;
-            line-height: 1.6;
+            line-height: 1.8;
             text-align: justify;
             color: #111111;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             padding: 0 5px;
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -217,7 +214,7 @@
         }
 
         .footer-section {
-            margin-top: 20px;
+            margin-top: 25px;
             width: 100%;
         }
 
@@ -230,18 +227,10 @@
             vertical-align: middle;
         }
 
-        .verified-badge {
-            color: #367D39;
-            font-weight: bold;
-            font-size: 14pt;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .disclaimer-text {
-            font-size: 8.5pt;
-            color: #666666;
-            margin-top: 4px;
-            font-family: Arial, Helvetica, sans-serif;
+        .profile-img-wrapper img {
+            width: 100px;
+            height: auto;
+            display: block;
         }
 
         .qr-wrapper {
@@ -253,6 +242,16 @@
             height: 75px;
             border: 1px solid #cccccc;
             padding: 2px;
+            display: inline-block;
+        }
+
+        .disclaimer-text {
+            font-size: 8.5pt;
+            color: #666666;
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
@@ -375,21 +374,21 @@
             <div class="footer-section">
                 <table class="footer-table">
                     <tr>
-                        <td style="width: 65%; text-align: left;">
-                            <div class="verified-badge">
-                                &#10004; VERIFIED
-                            </div>
-                            <div class="disclaimer-text">
-                                This is a web-based generated document and does not require any signature.
+                        <td style="width: 50%; text-align: left;">
+                            <div class="profile-img-wrapper">
+                                <img src="profilepicture.png" alt="Profile Picture">
                             </div>
                         </td>
-                        <td style="width: 35%; text-align: right;">
+                        <td style="width: 50%; text-align: right;">
                             <div class="qr-wrapper">
                                 <img src="qrcode.png" alt="QR Code">
                             </div>
                         </td>
                     </tr>
                 </table>
+                <div class="disclaimer-text">
+                    This is a web-based generated document and does not require any signature.
+                </div>
             </div>
         </div>
     </div>
