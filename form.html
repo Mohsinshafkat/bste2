@@ -25,7 +25,7 @@
         }
 
         .form-container {
-            max-width: 700px;
+            max-width: 794px;
             margin: 0 auto 40px auto;
             background: #ffffff;
             padding: 25px;
@@ -84,7 +84,6 @@
             background-color: #2b642e;
         }
 
-        /* PDF Wrapper Fix */
         #pdf-wrapper {
             position: absolute;
             left: -9999px;
@@ -94,7 +93,7 @@
 
         #pdf-template {
             width: 794px;
-            padding: 20px;
+            padding: 30px;
             background: #ffffff;
             box-sizing: border-box;
             font-family: 'Times New Roman', Times, serif;
@@ -104,7 +103,7 @@
         .page-container {
             width: 100%;
             border: 1px solid #e0e0e0;
-            padding: 20px 25px;
+            padding: 25px;
             box-sizing: border-box;
             background-color: #ffffff;
         }
@@ -115,8 +114,8 @@
         }
 
         .yt-logo {
-            max-width: 140px;
-            max-height: 90px;
+            max-width: 120px;
+            max-height: 80px;
             width: auto;
             height: auto;
             margin: 0 auto 8px auto;
@@ -126,7 +125,7 @@
 
         .domain-title {
             font-family: 'Canterbury', serif;
-            font-size: 26pt;
+            font-size: 24pt;
             font-weight: normal;
             color: #367D39;
             margin: 0;
@@ -135,7 +134,7 @@
 
         .sub-title {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
             color: #222222;
             margin-top: 5px;
@@ -154,24 +153,28 @@
             background-color: #367D39;
             color: #ffffff;
             font-weight: bold;
-            font-size: 11.5pt;
+            font-size: 11pt;
             text-transform: uppercase;
             padding: 6px 10px;
             text-align: center;
             letter-spacing: 0.5px;
-            margin-top: 8px;
-            margin-bottom: 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             font-family: Arial, Helvetica, sans-serif;
         }
 
         .content-section {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 12.5pt;
+            font-size: 11.5pt;
             font-weight: normal;
             line-height: 1.6;
             text-align: justify;
             color: #111111;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            padding: 0 5px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
         }
 
         .bold-field {
@@ -182,15 +185,17 @@
         .marks-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-family: 'Times New Roman', Times, serif;
+            table-layout: fixed;
         }
 
         .marks-table td {
             border: 1px solid #cccccc;
-            padding: 4px 10px;
+            padding: 6px 10px;
             font-size: 10.5pt;
             font-weight: 600;
+            word-wrap: break-word;
         }
 
         .marks-table td.label-col {
@@ -208,7 +213,7 @@
         }
 
         .footer-section {
-            margin-top: 15px;
+            margin-top: 20px;
             width: 100%;
         }
 
@@ -224,12 +229,12 @@
         .verified-badge {
             color: #367D39;
             font-weight: bold;
-            font-size: 15pt;
+            font-size: 14pt;
             font-family: Arial, Helvetica, sans-serif;
         }
 
         .disclaimer-text {
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #666666;
             margin-top: 4px;
             font-family: Arial, Helvetica, sans-serif;
@@ -240,8 +245,8 @@
         }
 
         .qr-wrapper img {
-            width: 80px;
-            height: 80px;
+            width: 75px;
+            height: 75px;
             border: 1px solid #cccccc;
             padding: 2px;
         }
@@ -306,21 +311,18 @@
     </form>
 </div>
 
-<!-- Render Wrapper -->
 <div id="pdf-wrapper">
     <div id="pdf-template">
         <div class="page-container">
             <div class="top-content">
-                <!-- Header Section -->
                 <div class="header-section">
                     <img src="logo.png" alt="Logo" class="yt-logo">
                     <div class="domain-title">Board of Science & Technology Education</div>
                     <div class="sub-title">Established Under (ABB, XXV of 1982 Govt Of Pakistan)</div>
                 </div>
 
-                <!-- Contact Bar -->
                 <div class="contact-bar">
-                    <div style="display: flex; justify-content: center; gap: 80px; font-size: 11pt; color: #333333;">
+                    <div style="display: flex; justify-content: center; gap: 60px; font-size: 10pt; color: #333333;">
                         <span>Email: info@bste.com.pk</span>
                         <span>Website: www.bste.com.pk</span>
                     </div>
@@ -328,15 +330,12 @@
 
                 <div class="red-box-header">APPROVED RESULT DETAILS</div>
 
-                <!-- Verification Text -->
                 <div class="content-section">
                     It is to verify that the Diploma/Certificate issued in favor of Mr/Miss/Mrs. <span class="bold-field" id="outStudentName"></span> S/D/W/O <span class="bold-field" id="outFatherName"></span>, vide Registration No: <span class="bold-field" id="outRegNo"></span> with Roll No: <span class="bold-field" id="outRollNo"></span> trained and evaluated by <span class="bold-field" id="outInstitute"></span> in the trade of <span class="bold-field" id="outCourse"></span> is found genuine according to our office record with the following transcript.
                 </div>
 
-                <!-- Section Box 2 -->
                 <div class="red-box-header">MARKS CARD DETAILS</div>
 
-                <!-- Marks Table -->
                 <table class="marks-table">
                     <tr>
                         <td class="label-col">Roll No.</td>
@@ -369,7 +368,6 @@
                 </table>
             </div>
 
-            <!-- Footer -->
             <div class="footer-section">
                 <table class="footer-table">
                     <tr>
@@ -397,7 +395,6 @@
     document.getElementById('verificationForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Get Values
         const studentName = document.getElementById('studentName').value;
         const fatherName = document.getElementById('fatherName').value;
         const regNo = document.getElementById('regNo').value;
@@ -410,7 +407,6 @@
         const obtainedMarks = document.getElementById('obtainedMarks').value;
         const percentage = document.getElementById('percentage').value;
 
-        // Set Values in PDF Template
         document.getElementById('outStudentName').innerText = studentName;
         document.getElementById('outFatherName').innerText = fatherName;
         document.getElementById('outRegNo').innerText = regNo;
@@ -429,10 +425,10 @@
         const element = document.getElementById('pdf-template');
 
         const opt = {
-            margin:       [10, 10, 10, 10],
+            margin:       0,
             filename:     'Verification_Document.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, scrollY: 0 },
+            image:        { type: 'jpeg', quality: 1.0 },
+            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
             pagebreak:    { mode: 'avoid-all' }
         };
