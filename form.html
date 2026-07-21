@@ -381,123 +381,15 @@ document.getElementById('outTableObtainedMarks').innerText = obtainedMarks;
 document.getElementById('outTablePercentage').innerText = percentage;
 const element = document.getElementById('pdf-template');
 const opt = {
-margin:       0,
-filename:     'Verification_Document.pdf',
-image:        { type: 'jpeg', quality: 1.0 },
-html2canvas:  { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
-jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-pagebreak:    { mode: 'avoid-all' }
+margin: 0,
+filename: rollNo ? ${rollNo}.pdf : 'Verification_Document.pdf',
+image: { type: 'jpeg', quality: 1.0 },
+html2canvas: { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
+jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+pagebreak: { mode: 'avoid-all' }
 };
 html2pdf().set(opt).from(element).save();
 });
 </script>
-</body>
-</html>
-utCourse"></span> is found genuine according to our office record with the following transcript.
-                </div>
-
-                <div class="red-box-header">MARKS CARD DETAILS</div>
-
-                <table class="marks-table">
-                    <tr>
-                        <td class="label-col">Roll No.</td>
-                        <td class="val-col" id="outTableRollNo"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">Programme / Course</td>
-                        <td class="val-col" id="outTableCourse"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">Session</td>
-                        <td class="val-col" id="outTableSession"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">Grade</td>
-                        <td class="val-col" id="outTableGrade"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">Total Marks</td>
-                        <td class="val-col" id="outTableTotalMarks"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">Obtained Marks</td>
-                        <td class="val-col" id="outTableObtainedMarks"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">Percentage</td>
-                        <td class="val-col" id="outTablePercentage"></td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="footer-section">
-                <table class="footer-table">
-                    <tr>
-                        <td style="width: 50%; text-align: left;">
-                            <div class="Stamp-wrapper">
-                                <img src="Stamp.png" alt="Stamp Picture">
-                            </div>
-                        </td>
-                        <td style="width: 50%; text-align: right;">
-                            <div class="qr-wrapper">
-                                <img src="qrcode.png" alt="QR Code">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <div class="disclaimer-text">
-                    This is a web-based generated document and does not require any signature.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    document.getElementById('verificationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const studentName = document.getElementById('studentName').value;
-        const fatherName = document.getElementById('fatherName').value;
-        const regNo = document.getElementById('regNo').value;
-        const rollNo = document.getElementById('rollNo').value;
-        const institute = document.getElementById('institute').value;
-        const course = document.getElementById('course').value;
-        const session = document.getElementById('session').value;
-        const grade = document.getElementById('grade').value;
-        const totalMarks = document.getElementById('totalMarks').value;
-        const obtainedMarks = document.getElementById('obtainedMarks').value;
-        const percentage = document.getElementById('percentage').value;
-
-        document.getElementById('outStudentName').innerText = studentName;
-        document.getElementById('outFatherName').innerText = fatherName;
-        document.getElementById('outRegNo').innerText = regNo;
-        document.getElementById('outRollNo').innerText = rollNo;
-        document.getElementById('outInstitute').innerText = institute;
-        document.getElementById('outCourse').innerText = course;
-
-        document.getElementById('outTableRollNo').innerText = rollNo;
-        document.getElementById('outTableCourse').innerText = course;
-        document.getElementById('outTableSession').innerText = session;
-        document.getElementById('outTableGrade').innerText = grade;
-        document.getElementById('outTableTotalMarks').innerText = totalMarks;
-        document.getElementById('outTableObtainedMarks').innerText = obtainedMarks;
-        document.getElementById('outTablePercentage').innerText = percentage;
-
-        const element = document.getElementById('pdf-template');
-
-        const opt = {
-            margin:       0,
-            filename:     'Verification_Document.pdf',
-            image:        { type: 'jpeg', quality: 1.0 },
-            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-            pagebreak:    { mode: 'avoid-all' }
-        };
-
-        html2pdf().set(opt).from(element).save();
-    });
-</script>
-
 </body>
 </html>
