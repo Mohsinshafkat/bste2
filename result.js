@@ -1,73 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const container = document.getElementById('result-container');
-  if (!container) return;
-
-  // URL parameters read karna (?roll=90625&year=2023)
-  const urlParams = new URLSearchParams(window.location.search);
-  const roll = urlParams.get('roll');
-  const year = urlParams.get('year');
-
-  if (!roll || !year) {
-    container.innerHTML = `
-      <div class="missing-result">
-        <div class="missing-icon">!</div>
-        <h2>Invalid Search Parameters</h2>
-        <p>Please enter Roll Number and Passing Year from verification page.</p>
-        <a href="v.html" class="button button-primary">Go to Verification Page</a>
-      </div>
-    `;
-    return;
-  }
-
-  // Search in studentsData array
-  const student = (window.studentsData || []).find(s => 
-    String(s.roll) === String(roll).trim() && String(s.year) === String(year).trim()
-  );
-
-  if (student) {
-    // Record matched
-    container.innerHTML = `
-      <div class="result-card">
-        <div class="result-status">
-          <span>✓</span> Official Verification Status: Verified Match
-        </div>
-        
-        <div class="result-title">
-          <p class="eyebrow">Credential Card</p>
-          <h2>${student.name}</h2>
-        </div>
-
-        <div class="record-grid">
-          <div class="record-row"><dt>Father / Husband Name</dt><dd>${student.fatherName || student.father_name || 'N/A'}</dd></div>
-          <div class="record-row"><dt>Roll Number</dt><dd>${student.roll}</dd></div>
-          <div class="record-row"><dt>Registration No.</dt><dd>${student.regNo || ('BSTE/TEC/' + student.roll)}</dd></div>
-          <div class="record-row"><dt>Passing Year</dt><dd>${student.year}</dd></div>
-          <div class="record-row"><dt>Programme / Course</dt><dd>${student.course || student.program}</dd></div>
-          <div class="record-row"><dt>Institute / Board</dt><dd>${student.institute || 'BSTE PAKISTAN'}</dd></div>
-          <div class="record-row"><dt>Session</dt><dd>${student.session || 'N/A'}</dd></div>
-          <div class="record-row"><dt>Grade</dt><dd>${student.grade || 'N/A'}</dd></div>
-          <div class="record-row"><dt>Total Marks</dt><dd>${student.totalMarks || student.total || 'N/A'}</dd></div>
-          <div class="record-row"><dt>Obtained Marks</dt><dd>${student.obtainedMarks || student.obtained || 'N/A'}</dd></div>
-          <div class="record-row"><dt>Percentage</dt><dd>${student.percentage || 'N/A'}</dd></div>
-        </div>
-
-        <div class="result-actions">
-          <button onclick="downloadCustomPDF('${student.roll}')" class="button button-primary">
-            Download Verification Document <span>↓</span>
-          </button>
-          <a href="v.html" class="button button-outline">Verify Another Record</a>
-        </div>
-      </div>
-    `;
-  } else {
-    // Record Not Found
-    container.innerHTML = `
-      <div class="missing-result">
-        <div class="missing-icon">✕</div>
-        <h2>No Record Found</h2>
-        <p>No student record was found matching Roll No: <strong>${roll}</strong> and Year: <strong>${year}</strong>.</p>
-        <a href="v.html" class="button button-primary">Try Again</a>
-      </div>
-    `;
-  }
-});
+(() => {
+  const target = document.getElementById('result-container'); if (!target || !Array.isArray(window.STUDENT_RECORDS)) return;
+  const params = new URLSearchParams(window.location.search); const record = window.STUDENT_RECORDS.find(item => item.roll === (params.get('roll') || '') && item.year === (params.get('year') || ''));
+  const esc = value => String(value).replace(/[&<>'"]/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' }[char]));
+  if (!record) { target.innerHTML = '<article class="missing-result"><div class="missing-icon">!</div><h2>Record not available</h2><p>Return to the verification page and enter the issued roll number and passing year.</p><a class="button button-primary" href="v.html">New search</a></article>'; return; }
+  const percentage = Number.parseFloat(record.per) || 0; const session = record.course.startsWith('DAE') ? `${Number(record.year) - 3}–${record.year}` : `Year ending ${record.year}`; const metric = percentage >= 80 ? 'Excellent performance' : percentage >= 70 ? 'Strong performance' : percentage >= 60 ? 'Satisfactory performance' : percentage >= 50 ? 'Developing performance' : 'Improvement required';
+  const rows = [['Name',record.name],['Father’s Name',record.father],['Roll No.',record.roll],['Registration No.',record.reg],['Programme / Course',record.course],['Session',session],['Grade',record.grade],['Total Marks',record.total],['Obtained Marks',record.obt],['Percentage',record.per]];
+  target.innerHTML = `<article class="result-card"><div class="result-status"><span>✓</span>Credential record verified</div><div class="result-title"><p class="eyebrow">BSTE examination record</p><h2>${esc(record.name)}</h2></div><dl class="record-grid">${rows.map(([label,value]) => `<div class="record-row"><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><div class="performance"><div class="performance-top"><span>Performance metric</span><strong>${esc(metric)} · ${esc(record.per)}</strong></div><div class="performance-bar"><div class="performance-fill" style="width:${Math.min(100,Math.max(0,percentage))}%"></div></div></div><div class="result-actions"><a class="button button-outline" href="v.html">← New search</a><a class="button button-primary" href="pdf/${encodeURIComponent(record.roll)}.pdf" download="${esc(record.roll)}.pdf">Download result <span>↓</span></a></div></article>`;
+})();
