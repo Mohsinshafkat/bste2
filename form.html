@@ -223,6 +223,29 @@ font-family: Arial, Helvetica, sans-serif;
 text-align: center;
 width: 100%;
 }
+
+  .page-container {
+position: relative;
+overflow: hidden;
+}
+
+.watermark {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 70%;
+max-width: 500px;
+opacity: 0.1;
+z-index: 0;
+pointer-events: none;
+}
+
+.top-content, .footer-section {
+position: relative;
+z-index: 1;
+}
+  
 </style>
 </head>
 <body>
@@ -231,52 +254,52 @@ width: 100%;
 <form id="verificationForm">
 <div class="form-group">
 <label>Student Name:</label>
-<input type="text" id="studentName" value="MUREED HUSSAIN" required>
+<input type="text" id="studentName" value="" required>
 </div>
 <div class="form-group">
 <label>Father / Husband Name:</label>
-<input type="text" id="fatherName" value="KHADIM HUSSAIN" required>
+<input type="text" id="fatherName" value="" required>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Registration No:</label>
-<input type="text" id="regNo" value="BSTE/TEC/90625" required>
+<input type="text" id="regNo" value="" required>
 </div>
 <div class="form-group">
 <label>Roll No:</label>
-<input type="text" id="rollNo" value="90625" required>
+<input type="text" id="rollNo" value="" required>
 </div>
 </div>
 <div class="form-group">
 <label>Evaluated / Institute Name:</label>
-<input type="text" id="institute" value="BSTE PAKISTAN" required>
+<input type="text" id="institute" value="" required>
 </div>
 <div class="form-group">
 <label>Programme / Course / Trade:</label>
-<input type="text" id="course" value="DAE (MECHANICAL TECHNOLOGY)" required>
+<input type="text" id="course" value="" required>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Session:</label>
-<input type="text" id="session" value="2020–2023" required>
+<input type="text" id="session" value="" required>
 </div>
 <div class="form-group">
 <label>Grade:</label>
-<input type="text" id="grade" value="A" required>
+<input type="text" id="grade" value="" required>
 </div>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label>Total Marks:</label>
-<input type="number" id="totalMarks" value="3450" required>
+<input type="number" id="totalMarks" value="" required>
 </div>
 <div class="form-group">
 <label>Obtained Marks:</label>
-<input type="number" id="obtainedMarks" value="2529" required>
+<input type="number" id="obtainedMarks" value="" required>
 </div>
 <div class="form-group">
 <label>Percentage:</label>
-<input type="text" id="percentage" value="73.25%" required>
+<input type="text" id="percentage" value="" required>
 </div>
 </div>
 <button type="submit" id="downloadBtn" class="btn-submit">Submit & Download PDF</button>
@@ -285,8 +308,10 @@ width: 100%;
 <div id="pdf-wrapper">
 <div id="pdf-template">
 <div class="page-container">
+  <img src="logo.png" alt="Watermark" class="watermark">
 <div class="top-content">
 <div class="header-section">
+<div class="red-box-header">VERIFICATION LETTER</div>
 <img src="logo.png" alt="Logo" class="yt-logo">
 <div class="domain-title">Board of Science & Technology Education</div>
 <div class="sub-title">Established Under (ABB, XXV of 1982 Govt Of Pakistan)</div>
