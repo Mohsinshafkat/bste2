@@ -6,22 +6,6 @@
     <title>Verification Document Generator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=TeX+Gyre+Termes:wght@400;700&display=swap');
-
-        @font-face {
-            font-family: 'TeX Gyre Termes';
-            src: local('TeX Gyre Termes'), local('TeXGyreTermes-Regular');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'TeX Gyre Termes';
-            src: local('TeX Gyre Termes Bold'), local('TeXGyreTermes-Bold');
-            font-weight: bold;
-            font-style: normal;
-        }
-
         @font-face {
             font-family: 'Canterbury';
             src: url('Canterbury.ttf') format('truetype');
@@ -100,23 +84,21 @@
             background-color: #2b642e;
         }
 
-        /* PDF Wrapper Fix - Absolute positioning and exact pixel height scale */
+        /* PDF Wrapper Fix */
         #pdf-wrapper {
             position: absolute;
             left: -9999px;
             top: 0;
-            width: 794px; /* Exact A4 width at 96 DPI */
+            width: 794px;
         }
 
         #pdf-template {
             width: 794px;
-            max-height: 1120px; /* Slightly under standard 1123px to ensure single page */
-            padding: 30px;
+            padding: 20px;
             background: #ffffff;
             box-sizing: border-box;
-            font-family: 'TeX Gyre Termes', 'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             color: #111111;
-            overflow: hidden;
         }
 
         .page-container {
@@ -133,9 +115,11 @@
         }
 
         .yt-logo {
-            width: 110px;
-            height: 70px;
-            margin: 0 auto 5px auto;
+            max-width: 140px;
+            max-height: 90px;
+            width: auto;
+            height: auto;
+            margin: 0 auto 8px auto;
             display: block;
             object-fit: contain;
         }
@@ -143,7 +127,7 @@
         .domain-title {
             font-family: 'Canterbury', serif;
             font-size: 26pt;
-            font-weight: bold;
+            font-weight: normal;
             color: #367D39;
             margin: 0;
             line-height: 1.1;
@@ -181,7 +165,7 @@
         }
 
         .content-section {
-            font-family: 'TeX Gyre Termes', 'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 12.5pt;
             font-weight: normal;
             line-height: 1.6;
@@ -199,7 +183,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 8px;
-            font-family: 'TeX Gyre Termes', 'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .marks-table td {
@@ -445,11 +429,12 @@
         const element = document.getElementById('pdf-template');
 
         const opt = {
-            margin:       0,
+            margin:       [10, 10, 10, 10],
             filename:     'Verification_Document.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, windowWidth: 794 },
-            jsPDF:        { unit: 'px', format: [794, 1120], orientation: 'portrait' }
+            html2canvas:  { scale: 2, useCORS: true, scrollY: 0 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            pagebreak:    { mode: 'avoid-all' }
         };
 
         html2pdf().set(opt).from(element).save();
