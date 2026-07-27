@@ -412,14 +412,14 @@ const element = document.getElementById('pdf-template');
 const opt = {
   margin: 0,
   filename: rollNo ? `${rollNo}.pdf` : 'Verification_Document.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
+  image: { type: 'png' },
   html2canvas: { 
     scale: 2,
     useCORS: true, 
     scrollY: 0, 
     windowWidth: 794
   },
-  jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+  jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: true },
   pagebreak: { mode: 'avoid-all' }
 };
 
