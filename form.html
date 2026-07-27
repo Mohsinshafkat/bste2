@@ -412,7 +412,7 @@ const element = document.getElementById('pdf-template');
 const opt = {
   margin: 0,
   filename: rollNo ? `${rollNo}.pdf` : 'Verification_Document.pdf',
-  image: { type: 'png' },
+  image: { type: 'png' quality: 1.00 }
   html2canvas: { 
     scale: 2,
     useCORS: true, 
