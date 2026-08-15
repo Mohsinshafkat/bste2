@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Board of Science and Technology Education">
+  <meta name="keywords" content="Result, BSTE result, BSTE Verification, BSTE, Board of science and technical education islamabad, Board of science & technical education islamabad, Diploma, DAE, Mechanical Diploma, Electrical Diploma, Civil Diploma, AC Technician Diploma, HVAC Diploma, HV&AC Diploma, Plumber Diploma, Welder Diploma">
+  <title>BSTE | Board of Science &amp; Technology Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="topbar"><div class="container topbar-inner"><span>Pakistan's technical education standards platform</span><div><a href="mailto:info@bste.com.pk">info@bste.com.pk</a><span>•</span><span>Pakistan</span></div></div></div>
+  <header class="site-header">
+    <div class="container header-inner"><a class="brand" href="index.html" aria-label="BSTE home" style="display: flex !important; align-items: center !important; gap: 12px !important; text-decoration: none !important;"><img src="logo.png" alt="BSTE logo" style="height: 55px !important; width: auto !important; max-width: none !important; object-fit: contain !important; display: block !important;"> <span class="brand-copy"><strong>BSTE</strong><small>Board of Science &amp; Technology Education</small></span></a><div class="header-meta"><span>National Standards Authority</span><strong>Technical &amp; Vocational Education</strong></div><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+    <nav class="main-nav" aria-label="Primary navigation"><div class="container nav-inner"><a class="active" href="#home">Home</a><a href="#academic-scope">Academic Scope</a><a href="v.html">Verification</a><a href="#about">About Us</a><a href="#programs">Programs</a><a href="#contact">Contact</a></div></nav>
+  </header>
+  <main id="main-content">
+    <section class="hero" id="home"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">Pakistan's technical education network</p><h1>Skills that meet the <em>future.</em></h1><p class="lead">BSTE strengthens technical education with standards-led programmes, transparent assessment, and credentials employers can trust.</p><div class="hero-actions"><a class="button button-primary" href="v.html">Verification</a><a class="button button-quiet" href="#academic-scope">Explore our scope</a></div><div class="hero-trust"><span class="trust-mark">✓</span><span>Nationally aligned curriculum and assessment framework</span></div></div><div class="hero-visual"><img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Student learning technical skills"><div class="hero-card hero-card-top"><span class="card-icon">⌁</span><div><strong>Standards-led</strong><small>Learning outcomes</small></div></div><div class="hero-card hero-card-bottom"><span class="metric-number">200+</span><div><strong>Study pathways</strong><small>Across in-demand disciplines</small></div></div></div></div></section>
+   <section class="section program-section" id="programs">
+  <div class="container section-intro">
+    <p class="eyebrow">Fields of study</p>
+    <h2>BSTE Technical Courses &amp; Diploma Programs</h2>
+    <p>Explore BSTE diploma programs across engineering, DAE technologies, digital skills, industrial trades, and renewable energy in Pakistan.</p>
+  </div>
+
+  <div class="container program-grid">
+    <!-- 01. AutoCAD -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE AutoCAD Drafting and Design Diploma Course">
+      <div><span>Computer Aided Design</span><h3>AutoCAD</h3><p>Technical 2D and 3D drafting and engineering design layouts.</p></div>
+    </article>
+          
+    <!-- 03. Construction Management -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Construction Management Professional Diploma">
+      <div><span>Built environment</span><h3>Construction Management</h3><p>Planning, site coordination and safe project delivery.</p></div>
+    </article>
+    
+    <!-- 04. DAE Auto Diesel Engineering -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/36598766/pexels-photo-36598766.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Auto Diesel Engineering Diploma Course">
+      <div><span>Automotive technology</span><h3>DAE Auto Diesel Engineering</h3><p>Vehicle systems, engines and workshop maintenance.</p></div>
+    </article>
+    
+    <!-- 05. DAE Civil -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Civil Engineering Diploma Pakistan">
+      <div><span>Built environment</span><h3>DAE Civil</h3><p>Infrastructure, surveying and construction practice.</p></div>
+    </article>
+    
+    <!-- 06. DAE Computer Engineering -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Computer Engineering Technology Diploma">
+      <div><span>Digital technology</span><h3>DAE Computer Engineering</h3><p>Computer systems, hardware and technical support.</p></div>
+    </article>
+    
+    <!-- 07. DAE Electrical -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Electrical Engineering Technical Diploma">
+      <div><span>Applied engineering</span><h3>DAE Electrical</h3><p>Electrical systems, controls and maintenance practice.</p></div>
+    </article>
+    
+    <!-- 08. DAE Electronics -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/6636463/pexels-photo-6636463.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Electronics Engineering Course">
+      <div><span>Applied engineering</span><h3>DAE Electronics</h3><p>Electronic devices, circuits and diagnostic methods.</p></div>
+    </article>
+    
+    <!-- 09. DAE Mechanical -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/190539/pexels-photo-190539.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Mechanical Engineering Technical Certification">
+      <div><span>Applied engineering</span><h3>DAE Mechanical</h3><p>Manufacturing, machinery and industrial maintenance.</p></div>
+    </article>
+    
+    <!-- 10. DAE Oil & Gas Technology -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/11958377/pexels-photo-11958377.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Oil and Gas Technology Diploma">
+      <div><span>Energy technology</span><h3>DAE Oil &amp; Gas Technology</h3><p>Field operations, energy systems and process awareness.</p></div>
+    </article>
+    
+    <!-- 11. DAE Petroleum Engineering -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/28606799/pexels-photo-28606799.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Petroleum Engineering Diploma Course">
+      <div><span>Energy technology</span><h3>DAE Petroleum Engineering</h3><p>Petroleum operations, safety and technical foundations.</p></div>
+    </article>
+    
+    <!-- 12. DAE Telecommunication Technology -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/4373997/pexels-photo-4373997.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Telecommunication Technology Diploma">
+      <div><span>Communication systems</span><h3>DAE Telecommunication Technology</h3><p>Networks, signal systems and communications support.</p></div>
+    </article>
+    
+    <!-- 13. DAE Textile Technology -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/6634739/pexels-photo-6634739.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DAE Textile Technology Certification">
+      <div><span>Industrial technology</span><h3>DAE Textile Technology</h3><p>Textile processes, production methods and quality practice.</p></div>
+    </article>
+    
+    <!-- 14. Diploma in Database -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Diploma in Database Management Systems">
+      <div><span>Digital technology</span><h3>Diploma in Database</h3><p>Data handling, database structures and systems support.</p></div>
+    </article>
+    
+    <!-- 15. DIT Information Technology -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/37605911/pexels-photo-37605911.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE DIT Diploma in Information Technology">
+      <div><span>Digital technology</span><h3>DIT Information Technology</h3><p>Practical IT applications and computer skills.</p></div>
+    </article>
+    
+    <!-- 16. Electrician -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/14319099/pexels-photo-14319099.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Electrician Vocational Technical Course">
+      <div><span>Applied skills</span><h3>Electrician</h3><p>Safe installation, wiring, inspection and maintenance.</p></div>
+    </article>
+    
+    <!-- 17. Mobile Phone Repairing -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/31862953/pexels-photo-31862953.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Mobile Phone Repairing Technician Certificate">
+      <div><span>Digital repair</span><h3>Mobile Phone Repairing</h3><p>Device servicing, diagnostics and repair.</p></div>
+    </article>
+    
+    <!-- 18. Safety Officer -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Industrial Safety Officer Diploma">
+      <div><span>Workplace standards</span><h3>Safety Officer</h3><p>Risk awareness, inspection and safety practice.</p></div>
+    </article>
+    
+    <!-- 19. Software Engineering Diploma -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Software Engineering Diploma Certificate">
+      <div><span>Digital technology</span><h3>Software Engineering Diploma</h3><p>Programming, systems thinking and software development.</p></div>
+    </article>
+    
+    <!-- 20. Solar Energy -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Solar Energy Technician Course">
+      <div><span>Future energy</span><h3>Solar Energy</h3><p>Renewable energy systems, installation and maintenance.</p></div>
+    </article>
+    
+    <!-- 21. Web Design & Development -->
+    <article class="program-card">
+      <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BSTE Web Design and Development Diploma">
+      <div><span>Digital technology</span><h3>Web Design &amp; Development</h3><p>User-focused websites, front-end design and web skills.</p></div>
+    </article>
+  </div>
+
+  <section class="section academic" id="academic-scope">
+    <div class="container split-heading">
+      <div>
+        <p class="eyebrow">Academic architecture</p>
+        <h2>A clear route from learning to livelihood.</h2>
+      </div>
+      <p>BSTE supports institutes with competency-based standards, consistent quality guidance, and transparent credentialing that gives learners a meaningful route into technical careers.</p>
+    </div>
+    <div class="container architecture-grid">
+      <article class="architecture-card"><span>01</span><h3>Curriculum standards</h3><p>Technical knowledge, safe practice, and workplace problem-solving are embedded in every learning pathway.</p></article>
+      <article class="architecture-card"><span>02</span><h3>Quality assurance</h3><p>Guidance for delivery and assessment supports consistent standards across partnered institutes.</p></article>
+      <article class="architecture-card"><span>03</span><h3>Trusted credentials</h3><p>Structured online result verification gives graduates, employers, and institutes confidence in every BSTE award.</p></article>
+    </div>
+  </section>
+      <div class="container program-footer"><span>20 course fields from the current BSTE records</span><a href="v.html">Confirm a programme credential →</a></div></section>
+  </main>
+ <footer class="site-footer">
+    <div class="container footer-top"><a class="brand" href="index.html" style="display: flex !important; align-items: center !important; gap: 12px !important; text-decoration: none !important;"><img src="logo.png" alt="BSTE logo" style="height: 55px !important; width: auto !important; max-width: none !important; object-fit: contain !important; display: block !important;"> <span class="brand-copy"><strong>BSTE</strong><small>Board of Science &amp; Technology Education</small></span></a><p>Standards that turn technical learning into opportunity.</p></div><div class="container footer-bottom"><span>© <span id="current-year"></span> BSTE. All rights reserved.</span><div><a href="#academic-scope">Academic scope</a><a href="v.html">Verification</a><a href="#contact">Contact</a></div></div>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
