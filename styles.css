@@ -1414,3 +1414,7 @@ a {
 .hero h2 {
   letter-spacing: -2px; /* Space kam karne ke liye negative value (e.g., -0.5px, -1px) */
 }
+/* Hero section ki main heading ki lines mein space kam karne ke liye */
+.hero h2 {
+  line-height: 1.0 !important; /* Default 1.5 ya 1.6 hota hai. Isko 1.1 ya 1.2 karke try karein */
+}
