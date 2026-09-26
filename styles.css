@@ -1394,3 +1394,23 @@ a {
     opacity: 1;
   }
 }
+/* Hero section ki main heading ka font size change karne ke liye */
+.hero h2 {
+  font-size: 3.0rem !important; /* Apni pasand ke hisab se size badlein (e.g., 2.5rem, 3rem, 40px, 50px) */
+  line-height: 1.5;
+}
+/* Hero section me sirf 'Education.' (em tag) ka size aur color change karne ke liye */
+.hero h2 em {
+  font-size: 3.0rem !important; /* Size apni marzi se kam ya zyada karein (e.g. 2rem, 3rem, 45px) */
+  color: #307233 !important;   /* Apni pasand ka color code yahan dalein */
+  font-style: italic;          /* Text ko straight (non-italic) rakhne ke liye */
+}
+/* Hero section ki heading ke letters mein space set karne ke liye */
+.hero h2 {
+  letter-spacing: 3px; /* Space badhane ke liye positive value (e.g., 1px, 2px, 3px) */
+}
+
+/* Agar letters ke darmiyan space kam karna ho: */
+.hero h2 {
+  letter-spacing: -2px; /* Space kam karne ke liye negative value (e.g., -0.5px, -1px) */
+}
