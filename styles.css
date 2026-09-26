@@ -1335,20 +1335,20 @@ a {
 
 .modal-box {
   background-color: #ffffff;
-  border: 3px solid #d32f2f;
+  border: 2px solid #307233;
   border-radius: 12px;
-  padding: 24px;
-  max-width: 480px;
+  padding: 18px;
+  max-width: 280px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   animation: popIn 0.3s ease-out;
 }
 
 .modal-header h2 {
-  color: #d32f2f;
+  color: #307233;
   margin: 8px 0 16px 0;
-  font-size: 26px;
+  font-size: 12px;
   font-family: 'Noto Nastaliq Urdu', serif;
   font-weight: 700;
 }
@@ -1358,8 +1358,8 @@ a {
 }
 
 .modal-body p {
-  color: #d32f2f;
-  font-size: 18px;
+  color: #307233;
+  font-size: 12px;
   line-height: 2.2;
   direction: rtl;
   font-weight: 600;
@@ -1368,11 +1368,11 @@ a {
 }
 
 #close-modal-btn {
-  background-color: #d32f2f;
+  background-color: #307233;
   color: #ffffff;
   border: none;
-  padding: 10px 28px;
-  font-size: 16px;
+  padding: 4px 4px;
+  font-size: 10px;
   font-weight: bold;
   font-family: 'Noto Nastaliq Urdu', 'Segoe UI', sans-serif;
   border-radius: 6px;
