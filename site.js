@@ -5,3 +5,9 @@
   const year = document.getElementById('current-year');
   if (year) year.textContent = new Date().getFullYear();
 })();
+function closeCautionModal() {
+  var modal = document.getElementById('caution-modal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
