@@ -23,6 +23,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+<!-- Google Font: Noto Nastaliq Urdu -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -101,5 +105,18 @@
     <div class="container footer-top"><a class="brand" href="index.html" style="display: flex !important; align-items: center !important; gap: 12px !important; text-decoration: none !important;"><img src="logo.png" alt="BSTE logo" style="height: 55px !important; width: auto !important; max-width: none !important; object-fit: contain !important; display: block !important;"> <span class="brand-copy"><strong>BSTE</strong><small>Board of Science &amp; Technology Education</small></span></a><p>Standards that turn technical learning into opportunity.</p></div><div class="container footer-bottom"><span>© <span id="current-year"></span> BSTE. All rights reserved.</span><div><a href="#academic-scope">Academic scope</a><a href="v.html">Verification</a><a href="#contact">Contact</a></div></div>
   </footer>
   <script src="site.js"></script>
+  <!-- Caution Popup Modal -->
+<div id="caution-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="warning-icon">⚠️</span>
+      <h2>توجہ فرمائیں</h2>
+    </div>
+    <div class="modal-body">
+      <p>یہ بورڈ آف سائنس اینڈ ٹیکنالوجی ایجوکیشن (BSTE) کا آفیشل پورٹل ہے۔ برائے مہربانی نتیجہ یا تصدیق کے لیے صحیح رول نمبر اور سال کا انتخاب کریں۔ کسی بھی قسم کی غلط معلومات کی صورت میں بورڈ ذمہ دار نہ ہو گا۔</p>
+    </div>
+    <button id="close-modal-btn" onclick="closeCautionModal()">ٹھیک ہے / OK</button>
+  </div>
+</div>
 </body>
 </html>
