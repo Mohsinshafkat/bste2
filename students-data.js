@@ -121,7 +121,7 @@ window.STUDENT_RECORDS = [
 { roll: "90567", year: "2025", name: "KASHIF ALI", father: "SHOUKAT ALI", reg: "BSTE/TEC/90567", course: "DIPLOMA IN DATABASE", total: "1000", obt: "412", per: "41.20%", grade: "D" },
 { roll: "905689", year: "2025", name: "HUSSAIN ALI", father: "ABDUL RASHID", reg: "BSTE/TEC/90568", course: "CONSTRUCTION MANAGEMENT", total: "1000", obt: "645", per: "64.50%", grade: "B" },
 { roll: "90568", year: "2023", name: "MUHAMMAD ADEEB", father: "HAQ NAWAZ", reg: "BSTE/HM/90568", course: "HOTEL MANAGEMENT", total: "2000", obt: "1494", per: "74.70%", grade: "A" },
-{ roll: "90571", year: "2020", name: "MUHAMMAD JAMAL KHAN", father: "MUHAMMAD RAEES KHAN", reg: "BSTE/DAE/MECH/90571", course: "DAE (MECHANICAL TECHNOLOGY)", total: "3450", obt: "2725", per: "78.98%", grade: "A" },
+{ roll: "90571", year: "2020", name: "MUHAMMAD JAMAL KHAN", father: "MUHAMMAD RAEES KHAN", reg: "BSTE/DAE/MECH/90571", course: "DAE (MECHANICAL TECHNOLOGY)", total: "3450", obt: "2719", per: "78.81%", grade: "A" },
 { roll: "90569", year: "2025", name: "FAISAL KHAN", father: "MUHAMMAD IQBAL", reg: "BSTE/TEC/90569", course: "DIPLOMA IN DATABASE", total: "1000", obt: "864", per: "86.40%", grade: "A+" },
 { roll: "90570", year: "2025", name: "NAVEED NAWAZ", father: "SHOUKAT ALI", reg: "BSTE/TEC/90570", course: "DAE (ELECTRONICS)", total: "3200", obt: "1631", per: "50.97%", grade: "C" },
 { roll: "905710000000", year: "2025", name: "IRFAN AKHTAR", father: "ABDUL MAJEED", reg: "BSTE/TEC/905710000000", course: "DAE (OIL & GAS TECHNOLOGY)", total: "3300", obt: "3157", per: "95.67%", grade: "A+" },
