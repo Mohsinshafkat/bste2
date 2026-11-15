@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main / Homepage -->
+  <url>
+    <loc>https://bste.com.pk/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- Verification Page -->
+  <url>
+    <loc>https://bste.com.pk/v.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Result Page -->
+  <url>
+    <loc>https://bste.com.pk/r.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+</urlset>
